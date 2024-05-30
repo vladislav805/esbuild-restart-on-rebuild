@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "declaration": true,
+        "declarationDir": "dist",
+        "outDir": "dist",
+        "strict": true,
+        "strictNullChecks": true,
+        "module": "CommonJS",
+        "moduleResolution": "Node",
+        "allowJs": false
+    },
+    "include": [
+        "src"
+    ],
+    "exclude": [
+        "dist"
+    ]
+}

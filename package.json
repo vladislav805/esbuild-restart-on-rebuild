@@ -1,0 +1,21 @@
+{
+  "name": "@veluga/esbuild-restart-on-rebuild",
+  "version": "0.0.1",
+  "private": false,
+  "description": "Plugin for restart node server after rebuild in watch mode.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -P tsconfig.json"
+  },
+  "author": "Vladislav <vlad@velu.ga> (https://velu.ga/)",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "20.12.13",
+    "esbuild": "0.21.4",
+    "typescript": "5.4.5"
+  }
+}
