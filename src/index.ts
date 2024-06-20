@@ -15,6 +15,9 @@ interface IRestartOnRebuildOptions {
     redirectOutput?: boolean;
 
     killNodeProcessOnInterrupt?: boolean;
+
+    cwd?: string;
+    env?: NodeJS.ProcessEnv;
 }
 
 export function RestartOnRebuild({
@@ -25,11 +28,16 @@ export function RestartOnRebuild({
     onServerClosed,
     redirectOutput = true,
     killNodeProcessOnInterrupt = true,
+    cwd,
+    env,
 }: IRestartOnRebuildOptions): Plugin {
     let server: ChildProcessWithoutNullStreams | undefined = undefined;
 
     function startServer(serverPath: string) {
-        server = spawn('node', [serverPath]);
+        server = spawn('node', [serverPath], {
+            cwd,
+            env,
+        });
 
         onServerStart?.();
 

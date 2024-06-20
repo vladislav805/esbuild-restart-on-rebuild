@@ -1,6 +1,6 @@
 {
   "name": "@veluga/esbuild-restart-on-rebuild",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": false,
   "description": "Plugin for restart node server after rebuild in watch mode.",
   "main": "dist/index.js",
